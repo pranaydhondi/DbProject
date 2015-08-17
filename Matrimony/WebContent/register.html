@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/style.css">
+<title>Register below</title>
+<script>
+	function validateForm(){
+		if(document.getElementById('register_by').value == "1"){
+			alert("'Profile for' attribute is not filled");
+			return false;
+		}
+		if(document.getElementById('RELIGION').value == "0"){
+			alert("'Religion' attribute is not filled");
+			return false;
+		}
+		if(document.getElementById('MOTHERTONGUE').value == 0){
+			alert("'Mother Tounge' attribute is not filled");
+			return false;
+			}
+		if(document.getElementById('COUNTRY').value == "0"){
+			alert("'Country' attribute is not filled");
+			return false;
+		}
+		var x = document.getElementById("email").value;
+		var atpos = x.indexOf("@");
+		var dotpos = x.lastIndexOf(".");
+		if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+			alert("Not a valid e-mail address");
+			return false;
+		}
+		
+	}
+</script>
+<style>
+body{
+	width:70%;
+	margin-right:20%;
+	margin-left:20%;
+}
+#female{
+	margin-left:20px;
+}
+tr td{
+	margin-left:20px;
+}
+ h5{
+ 	font-family: Times New Roman;
+ 	color:#5F9FFF;
+
+</style>
+</head>
+<body>
+
+<center><form method="post" action="Register" onsubmit="return validateForm()">
+<h2 style="color:#5F9FFF">Registration</h2><br>
+<table style="width:100%">
+	<tr>
+		<td><h5>Matrimony Profile for </h5></td> <td> :</td>
+		<td><SELECT name="register_by" id="register_by" width="30px">
+			<option value="1">Select Matrimony Profile for</option>
+	  		<option value="2">Myself</option>
+	  		<option value="3">Son</option>
+	  		<option value="4">Daughter</option>
+	  		<option value="5">Brother</option>
+	  		<option value="6">Sister</option>
+	  		<option value="7">Relative</option>
+	  		<option value="8">Friend</option>
+			</SELECT>
+		</td>
+	</tr>
+	<tr>
+		<td> <h5>Name </h5></td>
+		<td>:</td>
+		<td><input type="text" name="name" width="30px" placeholder="Enter Name here" required></td>
+	</tr>
+	<tr>
+		<td><h5>Gender</h5> </td>
+		<td>:&nbsp;</td>
+		<td><input type="radio" name="sex" value="male" checked="checked">Male &nbsp;&nbsp;
+		<input type="radio" name="sex" id-"female"value="female">Female</td>
+	</tr>
+	<tr>
+		<td><h5>Religion</h5> </td>
+		<td>:&nbsp;</td>
+		<td><select  name="RELIGION" id="RELIGION" size="1"  >
+			<option value="0" selected>Select Religion</option>
+			<option value="1">Hindu</option>
+			<option value="10">Muslim - Shia</option>
+			<option value="11">Muslim - Sunni</option>
+			<option value="2">Muslim - Others</option>
+			<option value="12">Christian - Catholic</option>
+			<option value="13">Christian - Orthodox</option>
+			<option value="14">Christian - Protestant</option>
+			<option value="3">Christian - Others</option>
+			<option value="4">Sikh</option>
+			<option value="15">Jain - Digambar</option>
+			<option value="16">Jain - Shwetambar</option>
+			<option value="5">Jain - Others</option>
+			<option value="6">Parsi</option><option value="7">Buddhist</option>
+			<option value="8">Inter-Religion</option>
+			<option value="9">No Religious Belief</option>
+		</select>
+		</td>
+	</tr>
+	<tr>
+		<td><h5>Mother Tounge</h5></td> <td>:</td>
+	<td><select  name="MOTHERTONGUE" id="MOTHERTONGUE" size="1"  >
+	<option value=0 selected>Select Mother Tongue</option>
+	<option value=54>Angika</option>
+	<option value=1>Arunachali</option>
+	<option value=2>Assamese</option>
+	<option value=3>Awadhi</option>
+	<option value=4>Bengali</option>
+	<option value=5>Bhojpuri</option>
+	<option value=6>Brij</option>
+	<option value=7>Bihari</option>
+	<option value=53>Badaga</option>
+	<option value=8>Chatisgarhi</option>
+	<option value=9>Dogri</option>
+	<option value=10>English</option>
+	<option value=11>French</option>
+	<option value=12>Garhwali</option>
+	<option value=13>Garo</option>
+	<option value=14>Gujarati</option>
+	<option value=15>Haryanvi</option>
+	<option value=16>Himachali/Pahari</option>
+	<option value=17 >Hindi</option>
+	<option value=18>Kanauji</option>
+	<option value=19>Kannada</option>
+	<option value=20>Kashmiri</option>
+	<option value=21>Khandesi</option>
+	<option value=22>Khasi</option>
+	<option value=23>Konkani</option>
+	<option value=24>Koshali</option>
+	<option value=25>Kumoani</option>
+	<option value=26>Kutchi</option>
+	<option value=27>Lepcha</option>
+	<option value=28>Ladacki</option>
+	<option value=29>Magahi</option>
+	<option value=30>Maithili</option>
+	<option value=31>Malayalam</option>
+	<option value=32>Manipuri</option>
+	<option value=33>Marathi</option>
+	<option value=34>Marwari</option>
+	<option value=35>Miji</option>
+	<option value=36>Mizo</option>
+	<option value=37>Monpa</option>
+	<option value=38>Nicobarese</option>
+	<option value=39>Nepali</option>
+	<option value=40>Oriya</option>
+	<option value=41>Punjabi</option>
+	<option value=42>Rajasthani</option>
+	<option value=43>Sanskrit</option>
+	<option value=44>Santhali</option>
+	<option value=45>Sindhi</option>
+	<option value=46>Sourashtra</option>
+	<option value=47>Tamil</option>
+	<option value=48>Telugu</option>
+	<option value=49>Tripuri</option>
+	<option value=50>Tulu</option>
+	<option value=51>Urdu</option>
+	</select></td>
+	</tr>
+	<tr>
+	<td><h5>Country</h5></td>  <td>:</td>
+	<td><select  name="COUNTRY" id="COUNTRY" size="1"  onchange="showMoreCountry(this.value); onTtip(this.value);">
+	<option value="0">Select Country living in</option>
+	<option value="98" style="color:#004F00">India</option>
+	<option value="222" style="color:#004F00">United States of America</option>
+	<option value="220" style="color:#004F00">United Arab Emirates</option>
+	<option value="221" style="color:#004F00">United Kingdom</option>
+	<option value="13" style="color:#004F00">Australia</option>
+	<option value="189" style="color:#004F00">Singapore</option>
+	<option value="39" style="color:#004F00">Canada</option>
+	<option value="173" style="color:#004F00">Qatar</option>
+	<option value="114" style="color:#004F00">Kuwait</option>
+	<option value="161" style="color:#004F00">Oman</option>
+	<option value="17" style="color:#004F00">Bahrain</option>
+	<option value="185" style="color:#004F00">Saudi Arabia</option>
+	<option value="129" style="color:#004F00">Malaysia</option>
+	<option value="80" style="color:#004F00">Germany</option>
+	<option value="153" style="color:#004F00">New Zealand</option>
+	<option value="73" style="color:#004F00">France</option>
+	<option value="102" style="color:#004F00">Ireland</option>
+	<option value="203" style="color:#004F00">Switzerland</option>
+	<option value="193" style="color:#004F00">South Africa</option>
+	<option value="195" style="color:#004F00">Sri Lanka</option>
+	<option value="99" style="color:#004F00">Indonesia</option>
+	<option value="149" style="color:#004F00">Nepal</option>
+	<option value="162" style="color:#004F00">Pakistan</option>
+	<option value="18" style="color:#004F00">Bangladesh</option>
+	<option value="1" style="color:#004F00">Afghanistan</option>
+	<option value="888" style="color:#004F00">Show more options</option>
+	</select></td>
+	</tr>
+	<tr>
+	<td>
+	<h5>Email id</h5></td> <td>:</td>
+	<td><input type="text" name="mail_id" id="email" width="30px" 
+	 placeholder="Enter Email id" required>
+	 </td>
+	 </tr>
+	 <tr>
+	 <td>
+	<h5>Password</h5></td><td>:</td>
+	<td> <input type="password" name="passwd" width="30px" 
+	 placeholder="select your password" required>
+	 </td>
+	 </tr>
+	 <tr>
+	 <td colspan="2">
+	 <p>
+	 By choosing to continue, you agree to our<br>
+	Terms & Conditions and Privacy Policy.</p></td>
+	<td>
+	 <button class="btn btn-primary " type="submit">Sign up</button>
+	<button class="btn btn-primary " type="reset">Clear</button>
+	</td>
+	</tr>
+	</table>
+	
+	
+</form>
+</center>
+</body>
+</html>
